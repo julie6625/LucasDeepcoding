@@ -8,6 +8,7 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = "stepDefinitions",
+        tags = "@API",
         plugin = {"pretty", "json:target/cucumber.json"}
 )
 
