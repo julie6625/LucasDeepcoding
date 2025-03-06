@@ -6,6 +6,7 @@ import io.cucumber.java.en.Then;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import io.restassured.response.ResponseBody;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import static org.testng.Assert.*;  // the reason for static: call utilities with ease
@@ -90,5 +91,9 @@ public class ApiSteps {
         assertNotNull(response.getBody(),"body should not be empty");
         System.out.println(response.getBody().asPrettyString());
 
+    }
+
+    public String getResponseBody(){
+        return response.getBody().asString();
     }
 }
