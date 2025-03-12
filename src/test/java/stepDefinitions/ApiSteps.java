@@ -6,8 +6,11 @@ import io.cucumber.java.en.Then;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import io.restassured.response.ResponseBody;
 import org.json.JSONArray;
 import org.json.JSONObject;
+import utils.ApiEndpoints;
+
 import static org.testng.Assert.*;  // the reason for static: call utilities with ease
 //import java.util.List;
 //import java.util.Map;
@@ -26,8 +29,9 @@ public class ApiSteps {
         System.out.println("Step: I should see the result.");
     }
 
-    private static final String BASE_URL = "https://asia.creativecdn.com";
     private static final String ENDPOINT = "/tags/v2?type=json&tc=1";
+    private static final String BASE_URL = ApiEndpoints.BASE_URL.getUrl();
+//    private static final String COLUMN_URL = ApiEndpoints.COLUMN_URL.getUrl();
     private Response response;
 
     public void setupApiRequest() {
@@ -90,5 +94,9 @@ public class ApiSteps {
         assertNotNull(response.getBody(),"body should not be empty");
         System.out.println(response.getBody().asPrettyString());
 
+    }
+
+    public String getResponseBody(){
+        return response.getBody().asString();
     }
 }
