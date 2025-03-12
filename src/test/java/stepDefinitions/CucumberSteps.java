@@ -1,7 +1,6 @@
 package stepDefinitions;
 
-import org.json.JSONObject;
-import stepDefinitions.ApiSteps;
+import api.ApiSteps;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;

@@ -1,4 +1,4 @@
-package stepDefinitions;
+package api;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
@@ -6,7 +6,6 @@ import io.cucumber.java.en.Then;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import io.restassured.response.ResponseBody;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import utils.ApiEndpoints;
