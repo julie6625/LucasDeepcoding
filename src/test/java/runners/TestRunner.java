@@ -8,7 +8,7 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = "stepDefinitions",
-        tags = "@restfulbooker",
+        tags = "@googleoauth2login",
         plugin = {"pretty", "json:target/cucumber.json"}
 )
 
